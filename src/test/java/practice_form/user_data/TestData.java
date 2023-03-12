@@ -1,4 +1,5 @@
-package practice_form;
+package practice_form.user_data;
+
 
 import static practice_form.RandomUtils.getRandomItemFromArray;
 
@@ -9,8 +10,10 @@ public class TestData {
 
     //  public static String[] cities = {"Delhi", "Gurgaon", "Noida"};
 
-    static String dataGender = getRandomItemFromArray(gender);
-    static String dataSubjects = getRandomItemFromArray(subjects);
-    static String dataHobbies = getRandomItemFromArray(hobbies);
+    public static String dataGender = getRandomItemFromArray(gender);
+    public static String dataSubjects = getRandomItemFromArray(subjects);
+    public static String dataHobbies = getRandomItemFromArray(hobbies);
+    public static String pictureName = "images/img.jpg";
+
 
 }

@@ -3,8 +3,8 @@ package practice_form;
 import org.junit.jupiter.api.Test;
 import pages.PageObgects;
 
-import static practice_form.FakerTestDate.*;
-import static practice_form.TestData.*;
+import static practice_form.user_data.FakerTestDate.*;
+import static practice_form.user_data.TestData.*;
 
 public class PracticeFormPages extends TestBase {
     PageObgects pageObgects = new PageObgects();
@@ -24,7 +24,7 @@ public class PracticeFormPages extends TestBase {
                 .setCurrentAddress(currentAddress)
                 .setSelectState(state)
                 .setSelectCity(city)
-                .setUploadPicture("images/img.jpg")
+                .setUploadPicture(pictureName)
                 .setSubmit();
 
         pageObgects.resultsModal()
