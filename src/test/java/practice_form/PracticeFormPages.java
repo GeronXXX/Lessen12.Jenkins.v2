@@ -35,7 +35,7 @@ public class PracticeFormPages extends TestBase {
                 .verifyResult("Date of Birth", dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
                 .verifyResult("Subjects", dataSubjects)
                 .verifyResult("Hobbies", dataHobbies)
-                .verifyResult("Picture", pictureName)
+                .verifyResult("Picture", "img.jpg")
                 .verifyResult("Address", currentAddress)
                 .verifyResult("State and City", state + " " + city);
 
