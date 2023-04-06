@@ -29,7 +29,7 @@ public class PageObgects {
     }
     public PageObgects setFirstName(String firstName) {
         firstNameInput.setValue(firstName);
-        return this;
+        return this;  //
     }
     public PageObgects setLastName( String lestName) {
         lastNameInput.setValue(lestName);
