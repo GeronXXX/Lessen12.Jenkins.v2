@@ -31,11 +31,12 @@ public class PageObgects {
         executeJavaScript("$('footer').remove()");
         return this;
     }
-    @Step("Entering a first and last name")
+    @Step("Entering a first name")
     public PageObgects setFirstName(String firstName) {
         firstNameInput.setValue(firstName);
-        return this;  //
+        return this;
     }
+    @Step("Entering a lest name")
     public PageObgects setLastName( String lestName) {
         lastNameInput.setValue(lestName);
         return this;
@@ -76,12 +77,13 @@ public class PageObgects {
         currentAddress.setValue(value);
         return this;
     }
-    @Step("Specify state and city")
+    @Step("choose a state")
     public PageObgects setSelectState(String value) {
         SelectState.click();
         $(byText(value)).click();
         return this;
     }
+    @Step("choose a city")
     public PageObgects setSelectCity(String value) {
         city.click();
         $(byText(value)).click();
@@ -96,11 +98,12 @@ public class PageObgects {
     public void setSubmit() {
         submit.click();
     }
-    @Step("Checking the entered data in the modal window")
+    @Step("Checking the modal window")
     public PageObgects resultsModal() {
         registrationResultsModal.resultsModalComponent();
         return this;
     }
+    @Step("Checking the entered data in the modal window")
     public PageObgects verifyResult(String key, String value) {
         registrationResultsModal.verifyResult(key, value);
         return this;
