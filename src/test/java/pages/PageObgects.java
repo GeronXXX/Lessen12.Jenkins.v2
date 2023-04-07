@@ -5,8 +5,7 @@ import pages.components.CalendarComponent;
 import pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class PageObgects {
     CalendarComponent calendarComponent = new CalendarComponent();
@@ -25,6 +24,8 @@ public class PageObgects {
     private final SelenideElement submit = $("#submit");
     public PageObgects openPage() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
         return this;
     }
     public PageObgects setFirstName(String firstName) {
