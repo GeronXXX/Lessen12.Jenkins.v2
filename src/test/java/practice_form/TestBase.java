@@ -14,11 +14,11 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void beforeALL() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserSize = System.getProperty("browser_size");
+        Configuration.baseUrl = System.getProperty("base_url");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browser_version");
+        Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
