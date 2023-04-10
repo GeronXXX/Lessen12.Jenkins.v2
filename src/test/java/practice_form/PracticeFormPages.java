@@ -8,13 +8,12 @@ import pages.PageObgects;
 import static io.qameta.allure.Allure.step;
 import static practice_form.user_data.FakerTestDate.*;
 import static practice_form.user_data.TestData.*;
-
+@Tag("remote")
 public class PracticeFormPages extends TestBase {
     PageObgects pageObgects = new PageObgects();
 
     @Test
     @DisplayName("Test form")
-    @Tag("remote")
     void practiceFormTest() {
 
         pageObgects.openPage()
