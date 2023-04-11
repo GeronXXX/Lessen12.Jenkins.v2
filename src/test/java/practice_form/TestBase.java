@@ -14,9 +14,9 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void beforeALL() {
+        Configuration.baseUrl = System.getProperty("base_Url", "https://1demoqa.com");
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url", "1selenoid.autotests.cloud/wd/hub");
          Configuration.browserSize = System.getProperty("browser_size");
-         Configuration.baseUrl = System.getProperty("base_Url", "https://1demoqa.com");
          Configuration.browser = System.getProperty("browser", "chrome");
          Configuration.browserVersion = System.getProperty("browser_version");
 
