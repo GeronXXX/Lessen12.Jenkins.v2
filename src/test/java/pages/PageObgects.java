@@ -26,7 +26,7 @@ public class PageObgects {
 
     @Step("Open Page")
     public PageObgects openPage() {
-        open("/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
