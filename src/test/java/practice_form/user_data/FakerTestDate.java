@@ -13,8 +13,12 @@ public class FakerTestDate {
     public static String firstName = faker.name().firstName();
     public static String lastName = faker.name().lastName();
     public static String email = faker.internet().emailAddress();
+
     // public static String Genter = faker.options().option("Male", "Female", "Other");
-    public static String phoneNumber = 1 + faker.phoneNumber().subscriberNumber(9);
+    // public static String subject = faker.options().option("Accounting", "Maths", "Arts", "English", "Physics", "Chemistry",
+    //        "Computer Science", "Economics", "Social Studies", "History", "Civics", "Commerce", "Hindi", "Biology");
+    // public static String hobbies = faker.options().option("Reading", "Sports", "Music");
+    public static String phoneNumber = 8 + faker.phoneNumber().subscriberNumber(9);
 
     public static Date fakerDateOfBirthday = faker.date().birthday();
     public static String dayOfBirth = (new SimpleDateFormat("d", Locale.ENGLISH)).format(fakerDateOfBirthday);
