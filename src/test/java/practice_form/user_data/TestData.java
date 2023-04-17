@@ -15,5 +15,5 @@ public class TestData {
     public static String dataHobbies = getRandomItemFromArray(hobbies);
     public static String pictureName = "images/img.jpg";
 
-
+//22
 }
